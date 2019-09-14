@@ -6,11 +6,18 @@ import { DataService, IDataItem } from "../shared/data.service";
     templateUrl: "./home.component.html"
 })
 export class HomeComponent implements OnInit {
-    items: Array<IDataItem>;
+    // items: Array<IDataItem>;
+    currentItem: IDataItem;
 
-    constructor(private _itemService: DataService) { }
+    constructor(private _itemService: DataService) {
+    }
 
     ngOnInit(): void {
-        this.items = this._itemService.getItems();
+        // this.items = this._itemService.getItems();
+        this.currentItem = this._itemService.getItem();
+    }
+
+    onClickUpdate() {
+        this.currentItem = this._itemService.getItem();
     }
 }

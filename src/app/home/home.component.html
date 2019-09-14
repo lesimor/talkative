@@ -2,6 +2,13 @@
     <Label class="action-bar-title" text="Home"></Label>
 </ActionBar>
 
+<FlexboxLayout flexDirection="column" justifyContent="center" backgroundColor="lightgray">
+    <Label class="text-center" [text]="currentItem.text" height="50%" [textWrap]="true" backgroundColor="red"></Label>
+    <Button height="10%" class="btn btn-primary" text="Update" (tap)="onClickUpdate()"></Button>
+</FlexboxLayout>
+
+
+<!--
 <GridLayout class="page page-content">
     <ListView [items]="items" class="list-group">
         <ng-template let-item="item">
@@ -9,3 +16,4 @@
         </ng-template>
     </ListView>
 </GridLayout>
+-->
